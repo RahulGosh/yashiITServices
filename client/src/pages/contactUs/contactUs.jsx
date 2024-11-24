@@ -23,7 +23,7 @@ const ContactUs = () => {
     const fetchContacts = async() => {
       try {
     const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-        const response = await axios.get(`${BACKEND_URL}/api/v1/getAllContacts`)
+        const response = await axios.get(`${BACKEND_URL}api/v1/getAllContacts`)
         console.log("Fetched contacts", response.data)
         setContacts(response.data)
       } catch (error) {
@@ -52,7 +52,7 @@ const ContactUs = () => {
     try {
       const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
       const response = await axios.post(
-        `${BACKEND_URL}/api/v1/createContact`,
+        `${BACKEND_URL}api/v1/createContact`,
         formData
       );
       console.log("Contact Created Successfully", response.data);
